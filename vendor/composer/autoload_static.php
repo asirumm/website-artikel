@@ -29,6 +29,10 @@ class ComposerStaticInitd674fbbeb8d9f27290eced699816fd35
         array (
             'Utils\\' => 6,
         ),
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
         'S' => 
         array (
             'ShipMonk\\PHPStan\\Baseline\\' => 26,
@@ -96,6 +100,10 @@ class ComposerStaticInitd674fbbeb8d9f27290eced699816fd35
         array (
             0 => __DIR__ . '/../..' . '/utils/src',
         ),
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'ShipMonk\\PHPStan\\Baseline\\' => 
         array (
             0 => __DIR__ . '/..' . '/shipmonk/phpstan-baseline-per-identifier/src',
@@ -106,8 +114,8 @@ class ComposerStaticInitd674fbbeb8d9f27290eced699816fd35
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
