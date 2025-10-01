@@ -38,11 +38,11 @@ class ResourceController extends BaseResource
     /**
      * Return the properties of a resource object
      *
-     * @param int|string|null $id
+     * @param int|string|null $slug
      *
      * @return ResponseInterface|string|void
      */
-    public function show($id = null)
+    public function show($slug = null)
     {
         return $this->fail(lang('RESTful.notImplemented', ['show']), 501);
     }

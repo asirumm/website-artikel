@@ -1,6 +1,6 @@
 <?php
 
-namespace Helpers;
+namespace App\Helpers;
 
 use CodeIgniter\HTTP\Files\UploadedFile;
 use Exception;

@@ -59,7 +59,7 @@ abstract class BaseApiController extends ResourceController
         ], $this->codes['updated']);
     }
 
-    protected function responseFailServerError(string $description = 'Internal Server Error'): ResponseInterface
+    protected function responseFailServerError(string $description = 'Internal Server Error')
     {
         return $this->respond([
             'status'  => 'error',
