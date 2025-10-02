@@ -32,6 +32,7 @@ class Routing extends BaseRouting
         APPPATH . 'Config/Routes.php',
         APPPATH . 'ApplicationRoutes/article.php',
         APPPATH . 'ApplicationRoutes/guest.php',
+        APPPATH . 'ApplicationRoutes/fileUpload.php',
     ];
 
     /**
