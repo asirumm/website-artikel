@@ -1,0 +1,197 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+@import "../css-base/reset.css";
+@import "../css-base/root.css";
+@import "../css-base/form-component.css";
+@import "../css-base/basic-component.css";
+@import "../css-base/utility.css";
+@import "../css-base/feedback-component.css";
+@import "../css-base/data-display-component.css";
+@import "admin.css";
+
+
+body{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    line-height: 1.5rem;
+    font-size: var(--font-16);
+    color: var(--text);
+      min-height: 100vh;
+      min-height: 100dvh;
+
+  background-color: var(--bg);
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+/*
+css ini digunakan untuk skeleton admin dashboard
+dari main content, sidebar dan header SAJA. Untuk halaman lain
+gunakan file terpisah agar mudah di maintain
+*/
+svg{
+    flex-shrink: 0;
+    width: var(--icon);
+    height: var(--icon);
+}
+path{
+    fill: var(--text-muted);
+}
+
+nav{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 250px;
+    padding: var(--spacing-8) var(--spacing-8);
+    background-color: var(--bg);
+    border-right: 1px solid var(--border);
+
+    position: sticky;
+    top: 0;
+    align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .menu{
+        padding-top: var(--spacing-8);
+        ul{
+            display: flex;
+            flex-direction: column;
+
+        }
+        ul li.active a{
+            color: var(--hover);
+        }
+        ul li a{
+            padding: var(--spacing-4) var(--spacing-8);
+            margin-bottom: var(--spacing-4);
+            border-radius: var(--border-radius-round);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            color: var(--text-muted);
+            transition: all 0.2s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        ul li a:hover {
+            background-color: var(--hover);
+        }
+    }
+    .footer{
+        position: absolute;
+        bottom: 0;
+    }
+}
+#sidebar.close{
+    width: 60px;
+
+    .logo{
+        opacity: 0;
+        transform: translateX(-10px);
+        width: 0;
+    }
+}
+nav .header .toggle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-8);
+    border-radius: var(--border-radius-round);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.toggle:hover{
+    background-color: var(--hover);
+}
+
+
+
+main{
+    overflow-x: hidden;
+
+    header{
+        min-height: 3rem;
+        padding: var(--spacing-12);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .main-content{
+        padding: var(--spacing-8);
+        min-height: 100vh;
+        max-width: 100%;
+        overflow-y: auto;
+    }
+}
+
+main header{
+    ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+    li:hover{
+        cursor: pointer;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--bg);
+        border-radius: var(--border-radius-round);
+        border: 1px solid var(--border);
+        padding: var(--spacing-8);
+        min-width: 10rem;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 100;
+    }
+
+    .dropdown.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .dropdown-item {
+        display: block;
+        color: var(--text);
+        text-decoration: none;
+        transition: background-color 0.2s;
+        width: 100%;
+        text-align: left;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .dropdown-menu a{
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: var(--spacing-4);
+        padding: var(--spacing-4);
+        border-radius: var(--border-radius-round);
+    }
+
+    .dropdown-menu a:hover{
+        background-color: var(--hover);
+    }
+}

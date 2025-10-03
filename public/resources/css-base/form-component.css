@@ -1,0 +1,19 @@
+input[type="text"]{
+    height: calc(var(--font-16) + 2);
+    border-radius: var(--border-radius-sharp);
+    border: 1px solid var(--border);
+}
+select{
+    border-radius: var(--border-radius-sharp);
+    border: 1px solid var(--border);
+    margin-bottom: var(--spacing-12);
+}
+
+
+.input-form{
+    margin-bottom: var(--spacing-12);
+}
+
+.label-input{
+    font-weight: 500;
+}

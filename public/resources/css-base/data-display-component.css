@@ -1,0 +1,187 @@
+.container-table{
+    width: 100%;
+    max-width:100%;
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-round);
+    min-height: 20rem;
+    margin-top: var(--spacing-4);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: var(--bg);
+
+}
+
+.table-head{
+    margin-top: var(--spacing-16) ;
+    margin-bottom: var(--spacing-12) ;
+    padding-right: var(--spacing-16);
+    padding-left: var(--spacing-16);
+    padding-bottom: var(--spacing-16);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+
+    .title{
+        font-weight: 600;
+        font-size: var(--font-28);
+    }
+
+    .addding-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        font-weight: 400;
+        padding: 4px 10px;
+        text-decoration: none;
+        color: var(--text);
+        border: 1px solid var(--black);
+        border-radius: var(--border-radius-round);
+
+        path {
+            fill: var(--text);
+        }
+    }
+
+}
+
+.table-subhead{
+    padding-right: var(--spacing-16);
+    padding-left: var(--spacing-16);
+
+    display: flex;
+    flex-direction: column;
+}
+.table-subhead .first-child{
+    display: flex;
+    justify-content: space-between;
+
+    .left{
+        display: flex;
+        align-items: center;
+        min-width: 8rem;
+        max-width: 16rem;
+
+        padding-left: var(--spacing-8);
+
+        border-radius: var(--border-radius-sharp);
+        border: 1px solid var(--border);
+
+        label{
+            padding-top: var(--spacing-4);
+        }
+        input{
+            border: none;
+            background-color: transparent;
+            padding: var(--spacing-4);
+        }
+        input::placeholder{
+            font-size: var(--font-16);
+        }
+    }
+
+    .right{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        cursor: pointer;
+
+        border: 1px solid var(--border);
+        border-radius: var(--border-radius-round);
+        padding: var(--spacing-4) var(--spacing-12);
+    }
+}
+.table-subhead .second-child{
+    margin-top: var(--spacing-12);
+    margin-bottom: var(--spacing-12);
+    display: flex;
+    gap: var(--spacing-8);
+
+    .filter{
+        display: inline-block;
+        padding: var(--spacing-4) var(--spacing-12);
+        border-radius: var(--border-radius-round);
+        border: 1px solid var(--border);
+        color: var(--text-muted);
+    }
+    .filter:hover{
+        background-color: var(--hover);
+    }
+}
+
+
+.table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+}
+table.style-1{
+    margin-bottom: var(--spacing-12);
+    width: auto;
+    min-width: 100%;
+    border-collapse: collapse;
+
+    tr{
+        border-top: 1px solid var(--border);
+
+        min-width: 8rem;
+        max-width: 20rem;
+    }
+
+    thead{
+        color: var(--text-muted);
+
+        th{
+            padding: var(--spacing-8) var(--spacing-8);
+
+            border-right: 1px solid var(--border);
+            text-align: left;
+
+            white-space: nowrap;
+        }
+    }
+
+    tbody{
+        tr:hover{
+            background-color: var(--hover);
+        }
+        td{
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            padding: var(--spacing-8);
+
+            /*white-space: nowrap;*/
+            max-width: 17rem;
+            min-width: 9rem;
+            text-wrap: wrap;
+        }
+
+        td >.edit-button path{
+            fill: var(--success);
+        }
+
+        td >.delete-button path{
+            fill: var(--danger);
+        }
+    }
+}
+
+.container-table .pagination{
+    min-height: 4rem;
+    padding: var(--spacing-12);
+
+    ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    ul li{
+        padding: var(--spacing-8);
+        cursor: pointer;
+    }
+}

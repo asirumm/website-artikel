@@ -1,0 +1,177 @@
+.button-primary {
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius-round);
+    color: var(--bg);
+
+    cursor: pointer;
+    display: inline-block;
+
+    font-family: var(--font-style);
+    font-size: var(--font-16);
+    font-weight: 700;
+
+    text-align: center;
+
+    padding: 9px 20px 8px;
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.button-primary:hover,
+.button-primary:focus {
+    filter: brightness(150%);
+}
+
+.button-outline {
+    background-color: transparent;
+    color: var(--primary);
+
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius-round);
+
+    cursor: pointer;
+    display: inline-block;
+
+    font-family: var(--font-style);
+    font-size: var(--font-16);
+    font-weight: 700;
+    text-align: center;
+
+    padding: 9px 20px 8px;
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+.button-outline:hover,
+.button-outline:focus {
+    filter: brightness(150%);
+}
+
+
+.button-grey {
+    background-color: var(--bg-dark);
+    color: var(--bg);
+
+    border: 1px solid var(--bg-dark);
+    border-radius: var(--border-radius-round);
+
+    cursor: pointer;
+    display: inline-block;
+
+    font-size: var(--font-16);
+    font-weight: 700;
+    font-family: var(--font-style);
+    text-align: center;
+
+    padding: 9px 20px 8px;
+    height: fit-content;
+    width: fit-content;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-small{
+    padding: 4px 8px 8px;
+}
+
+/*--------------------badge----------------------*/
+
+.badge-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+/* Badge bulat */
+.badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(70%, -25%);
+    background:var(--danger);
+    color: var(--white);
+    font-size: 0.86rem;
+    font-weight: 600;
+    border-radius: 50%;
+    min-width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+/* ------------------- badge-status*/
+.status-badge-inactive{
+    display: inline-block;
+    padding: var(--spacing-4) var(--spacing-12);
+    border-radius: var(--border-radius-round);
+    color: var(--text-muted);
+    border: 1px solid var(--text-muted);
+}
+.status-badge-active{
+    display: inline-block;
+    padding: var(--spacing-4) var(--spacing-12);
+    border-radius: var(--border-radius-round);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+
+
+/* ------------------- tooltip*/
+.tooltip:focus::after, .tooltip:hover::after {
+    opacity: 1;
+    transform: translate(-50%,-.2rem);
+}
+.tooltip::after {
+    background: #0e0e0e;
+    border-radius: var(--border-radius-sharp);
+    bottom: 100%;
+    color: #fff;
+    content: attr(data-tooltip);
+    display: block;
+    font-size: .90rem;
+    left: 50%;
+    max-width: 320px;
+    opacity: 0;
+    overflow: hidden;
+    padding: .2rem .4rem;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    transform: translate(-50%,.4rem);
+    transition: opacity .2s,transform .2s;
+    white-space: pre;
+    z-index: 300;
+    font-weight: 400;
+}
+.tooltip {
+    position: relative;
+}
+.tooltip.tooltip-right:focus::after, .tooltip.tooltip-right:hover::after {
+    transform: translate(.2rem,50%);
+}
+.tooltip.tooltip-right::after {
+    bottom: 50%;
+    left: 100%;
+    transform: translate(-.2rem,50%);
+}
+.tooltip.tooltip-bottom:focus::after, .tooltip.tooltip-bottom:hover::after {
+    transform: translate(-50%,.2rem);
+}
+.tooltip.tooltip-bottom::after {
+    bottom: auto;
+    top: 100%;
+    transform: translate(-50%,-.4rem);
+}
+
+.tooltip.tooltip-left:focus::after, .tooltip.tooltip-left:hover::after {
+    transform: translate(-.2rem,50%);
+}
+.tooltip.tooltip-left::after {
+    bottom: 50%;
+    left: auto;
+    right: 100%;
+    transform: translate(.4rem,50%);
+}

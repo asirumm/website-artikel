@@ -1,0 +1,57 @@
+
+
+:root{
+    /*light*/
+    --bg-dark: hsl(0, 0%, 60%);
+    --bg: hsl(0, 0%, 97%);
+    --bg-light: hsl(0, 0%, 97%);
+
+    --border: hsl(0, 0%, 85%);
+    --hover: hsl(0, 0%, 90%);
+
+    --text-muted: hsl(240, 5%, 34%);
+    --text: hsl(220, 20%, 15%);
+
+    --black:hsl(221 37% 5%);
+    --white:hsl(0, 0%, 97%);
+    /*dark*/
+    /*--bg-dark:hsl(225 57% 2%);*/
+    /*--bg:hsl(221 37% 5%);*/
+    /*--bg-light:hsl(220 22% 9%);*/
+
+    /*--border:hsl(0, 0%, 80%);*/
+
+    /*--text-muted:hsl(220 20% 71%);*/
+    /*--text:hsl(220 100% 97%);*/
+
+    --primary:hsl(166, 80%, 25%);
+    --primary-dark: hsl(164, 75%, 15%);
+    --primary-light:hsl(166, 50%, 88%);
+
+    --danger:hsl(0, 91%, 56%);
+    --warning:hsl(57, 80%, 50%);
+    --success:hsl(107, 77%, 46%);
+
+
+    --border-radius-sharp:0.1rem;
+    --border-radius-round:0.4rem;
+
+    --font-style:"Inter", sans-serif;
+    --font-8:0.5rem;
+    --font-12:0.75rem;
+    --font-16:1rem;
+    --font-20:1.25rem;
+    --font-28:1.75rem;
+    --font-40:2.5rem;
+
+    --spacing-4:0.25rem;
+    --spacing-8:0.5rem;
+    --spacing-12:0.75rem;
+    --spacing-16:1rem;
+    --spacing-20:1.25rem;
+    --spacing-28:1.75rem;
+    --spacing-40:2.5rem;
+    --spacing-60:3.75rem;
+
+    --icon:26px;
+}
