@@ -24,7 +24,7 @@ class ContentImageController extends ResourceController
     public function create()
     {
         // dari form post api
-        $file = $this->request->getFile("image");
+        $file = $this->request->getFile("content-image");
 
         $fileName = RandomString::randomString(10);
         $fileName = $fileName.".".$file->getClientExtension();
@@ -34,10 +34,10 @@ class ContentImageController extends ResourceController
         if ($result==null){
             $this->logger->warning("upload image content gagal");
 
-            return $this->respond(["data"=>null,"message"=>"gagal upload ada kesalahan server"],500);
+            return $this->respond(["url"=>null,"message"=>"gagal upload ada kesalahan server"],500);
         }
 
         $url = base_url("article/content-image/{$fileName}");
-        return $this->respond(["data"=>$url,"message"=>"sukses upload file"],201);
+        return $this->respond(["url"=>$url,"message"=>"sukses upload file"],201);
     }
 }
